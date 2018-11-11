@@ -18,9 +18,9 @@ function addToOrder(){
     while(input != 'stop'){
         input = prompt('wat wilt u bestellen');
         if(input == 'fris') {
-             var inputfris = parseInt(prompt('hoeveel fris wilt u bestellen'));
-             hoeveelfris = hoeveelfris + inputfris;
-             console.log('Hoeveel fris ' + hoeveelfris);
+            var inputfris = parseInt(prompt('hoeveel fris wilt u bestellen'));
+            hoeveelfris = hoeveelfris + inputfris;
+            console.log('Hoeveel fris ' + hoeveelfris);
         }else if(input == 'bier'){
             var inputbier = parseInt(prompt('hoeveel bier wilt u bestellen'));
             hoeveelbier = hoeveelbier + inputbier;
@@ -55,19 +55,39 @@ function snacks(){
 }
 
 function rekening(){
-var totaalfris = prijsfris * hoeveelfris;
-var totaalbier = prijsbier * hoeveelbier;
-var totaalwijn = prijswijn * hoeveelwijn;
-var totaalsnack8 = prijs8 * hoeveel8;
-var totaalsnack16 = prijs16 * hoeveel16;
-var totaal = totaalfris + totaalbier + totaalwijn + totaalsnack8 + totaalsnack16;
+    var totaalfris = prijsfris * hoeveelfris;
+    var totaalbier = prijsbier * hoeveelbier;
+    var totaalwijn = prijswijn * hoeveelwijn;
+    var totaalsnack8 = prijs8 * hoeveel8;
+    var totaalsnack16 = prijs16 * hoeveel16;
+    var totaal = totaalfris + totaalbier + totaalwijn + totaalsnack8 + totaalsnack16;
 
-document.write('aantal fris: ' + hoeveelfris + '<br>' + 'dit kost bij elkaar: ' + totaalfris + '<br>' + '<br>');
-document.write('aantal bier: ' + hoeveelbier + '<br>' + 'dit kost bij elkaar: ' + totaalbier + '<br>' + '<br>');
-document.write('aantal wijn: ' + hoeveelwijn + '<br>' + 'dit kost bij elkaar: ' + totaalwijn + '<br>' + '<br>');
-document.write('aantal schalen met 8 snacks: ' + hoeveel8 + '<br>' + 'dit kost bij elkaar: ' + totaalsnack8 + '<br>' + '<br>');
-document.write('aantal schalen met 16 snacks: ' + hoeveel16 + '<br>' + 'dit kost bij elkaar: ' + totaalsnack16 + '<br>' + '<br>');
-document.write('de totaalprijs is: ' + totaal);
+    if(hoeveelfris > 0) {
+        document.write('aantal fris: ' + hoeveelfris + '<br>' + 'dit kost bij elkaar: \u20AC' + totaalfris + '<br>' + '<br>');
+    }else{
+        document.write()
+    }
+    if(hoeveelbier > 0) {
+        document.write('aantal bier: ' + hoeveelbier + '<br>' + 'dit kost bij elkaar: \u20AC' + totaalbier + '<br>' + '<br>');
+    }else{
+        document.write()
+    }
+    if(hoeveelwijn > 0) {
+        document.write('aantal wijn: ' + hoeveelwijn + '<br>' + 'dit kost bij elkaar: \u20AC' + totaalwijn + '<br>' + '<br>');
+    }else{
+        document.write()
+    }
+    if(hoeveel8 > 0) {
+        document.write('aantal schalen met 8 snacks: ' + hoeveel8 + '<br>' + 'dit kost bij elkaar: \u20AC \u20AC' + totaalsnack8 + '<br>' + '<br>');
+    }else{
+        document.write()
+    }
+    if(hoeveel16 > 0) {
+        document.write('aantal schalen met 16 snacks: ' + hoeveel16 + '<br>' + 'dit kost bij elkaar: \u20AC' + totaalsnack16 + '<br>' + '<br>');
+    }else{
+        document.write()
+    }
+    document.write('de totaalprijs is: \u20AC' + totaal);
 }
 
 addToOrder();
