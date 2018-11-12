@@ -1,5 +1,9 @@
-var tables = prompt('welke tafel wilt u hebben');
 
+
+function prompt() {
+    var tables = prompt('what table to you want to display');
+    return tables
+}
 
 function calculator() {
     var a = 1;
@@ -19,5 +23,20 @@ function calculator() {
     }
 }
 
+<<<<<<< Updated upstream
 calculator();
 
+=======
+
+if(tables <= 10){
+    calculator()
+}else{
+    if(isNaN(tables){
+        alert('you need to use numbers');
+        prompt();
+    }else{
+        alert('you need to pick a figure between 1 and 10');
+        prompt();
+    }
+}
+>>>>>>> Stashed changes
