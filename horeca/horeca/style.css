@@ -1,0 +1,14 @@
+body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px;
+    color: white;
+    background-image: url("wallpaper.jpg");
+}
+
+div{
+    margin-top: 20px;
+}
