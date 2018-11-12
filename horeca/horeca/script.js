@@ -1,8 +1,8 @@
-let prijs_fris = 2.50;
-let prijs_bier = 3.30;
-let prijs_wijn = 3.10;
-let prijs_8 = 4.50;
-let prijs_16 = 7;
+const prijs_fris = 2.50;
+const prijs_bier = 3.30;
+const prijs_wijn = 3.10;
+const prijs_8 = 4.50;
+const prijs_16 = 7;
 
 let hoeveelFris = 0;
 let hoeveelBier = 0;
@@ -28,11 +28,14 @@ function addToOrder(){
             hoeveelWijn = hoeveelWijn + inputWijn;
         }else if(input === 'snacks'){
             snacks();
+        } if(input !== 'bier' && input !== 'wijn' && input!== 'fris' && input !=='snacks' && input !=='stop'){
+            alert('U kan alleen bier, fris, wijn of snacks bestellen');
         }else{
             rekening();
+            }
         }
     }
-}
+
 
 // Dit is de functie om de snacks op te nemen en deze te berekenen.
 function snacks(){
@@ -61,33 +64,21 @@ function rekening(){
 
     if(hoeveelFris > 0) {
         document.write('<div>' + 'Aantal fris: ' + hoeveelFris + '<br>' + 'Dit kost bij elkaar: \u20AC' + totaalfris.toFixed(2) + '</div>');
-    }else{
-        document.write();
     }
     if(hoeveelBier > 0) {
         document.write('<div>' + 'Aantal bier: ' + hoeveelBier + '<br>' + 'Dit kost bij elkaar: \u20AC' + totaalbier.toFixed(2) + '</div>');
-    }else{
-        document.write();
     }
     if(hoeveelWijn > 0) {
         document.write('<div>' + 'Aantal wijn: ' + hoeveelWijn + '<br>' + 'Dit kost bij elkaar: \u20AC' + totaalwijn.toFixed(2) + '</div>');
-    }else{
-        document.write();
     }
     if(hoeveel_8 > 0) {
         document.write('<div>' + 'Aantal schalen met 8 snacks: ' + hoeveel_8 + '<br>' + 'Dit kost bij elkaar: \u20AC' + totaalsnack8.toFixed(2) + '</div>');
-    }else{
-        document.write();
     }
     if(hoeveel_16 > 0) {
         document.write('<div>' + 'Aantal schalen met 16 snacks: ' + hoeveel_16 + '<br>' + 'Dit kost bij elkaar: \u20AC' + totaalsnack16.toFixed(2) + '</div>');
-    }else{
-        document.write();
     }
     if(totaal > 0) {
         document.write('<div>' + 'De totaalprijs is: \u20AC' + totaal.toFixed(2) + '</div>');
-    }else{
-        document.write();
     }
 }
 
